@@ -33,6 +33,15 @@ const App = () => {
       <Navbar scrollToSection={scrollToSection} />
       <Hero scrollPosition={scrollPosition} />
       <Section
+        id="projects"
+        title="Projects"
+        content={[
+          { title: "Project 1", description: "A modern e-commerce platform with advanced features." },
+          { title: "Project 2", description: "A responsive portfolio website to showcase creativity." },
+          { title: "Project 3", description: "An innovative blog platform with rich user interactions." }
+        ]}
+      />
+      <Section
         id="features"
         title="Features"
         content={[
@@ -42,12 +51,12 @@ const App = () => {
         ]}
       />
       <Section
-        id="projects"
-        title="Projects"
+        id="stack"
+        title="Stack"
         content={[
-          { title: "Project 1", description: "A modern e-commerce platform with advanced features." },
-          { title: "Project 2", description: "A responsive portfolio website to showcase creativity." },
-          { title: "Project 3", description: "An innovative blog platform with rich user interactions." }
+          { title: "Fast", description: "Experience blazing-fast load times and performance." },
+          { title: "Responsive", description: "Designed to work seamlessly across all devices." },
+          { title: "Modern", description: "Built with the latest web technologies for a sleek design." }
         ]}
       />
       <Section

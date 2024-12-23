@@ -20,18 +20,19 @@ const Navbar = styled.nav`
     margin: 0 1rem;
 
     &:hover {
-      color: #42b883;
+      color:rgb(9, 132, 233);
     }
   }
 `;
 
 const NavbarComponent = ({ scrollToSection }) => (
   <Navbar>
-    <div>My Portfolio</div>
+    <div>Moon Portfolio</div>
     <div>
       <a onClick={() => scrollToSection("home")}>Home</a>
-      <a onClick={() => scrollToSection("features")}>Features</a>
       <a onClick={() => scrollToSection("projects")}>Projects</a>
+      <a onClick={() => scrollToSection("features")}>Features</a>
+      <a onClick={() => scrollToSection("stack")}>Stack</a>
       <a onClick={() => scrollToSection("contact")}>Contact</a>
     </div>
   </Navbar>

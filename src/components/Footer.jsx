@@ -12,7 +12,7 @@ const Footer = styled.footer`
 
 const FooterComponent = () => (
   <Footer>
-    © 2024 Your Name. All rights reserved.
+    © 2024 Moon Sang Hyeok. All rights reserved.
   </Footer>
 );
 
