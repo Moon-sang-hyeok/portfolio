@@ -33,7 +33,7 @@ const NavbarComponent = ({ scrollToSection }) => (
       <a href="#" onClick={() => scrollToSection("home")}>Home</a>
       <a href="#" onClick={() => scrollToSection("projects")}>Projects</a>
       <a href="#" onClick={() => scrollToSection("features")}>Features</a>
-      <a href="#" onClick={() => scrollToSection("stack")}>Stack</a>
+      <a href="#" onClick={() => scrollToSection("stack")}>Tech</a>
       <a href="#" onClick={() => scrollToSection("contact")}>Contact</a>
     </div>
   </Navbar>
