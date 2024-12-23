@@ -114,21 +114,38 @@ const Hero = () => {
       <CircuitSVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" ref={svgRef}>
         {/* 경로들 */}
         {paths.map((path, index) => (
-          <motion.path
-            key={index}
-            id={`path-${index}`}
-            d={path}
-            stroke="#ffffff"
-            strokeWidth="2"
-            fill="transparent"
-            variants={pathVariants}
-            initial="hidden"
-            animate="visible"
-            onAnimationComplete={
-              index === paths.length - 1 ? () => setPathsComplete(true) : undefined
-            }
-          />
+          <>
+            {/* 빛나는 외곽선 */}
+            <motion.path
+              key={`glow-${index}`}
+              d={path}
+              stroke="#ffffff"
+              strokeWidth="10"
+              opacity="0.5"
+              fill="transparent"
+              style={{ filter: 'blur(4px)' }} // 흐림 효과
+              variants={pathVariants}
+              initial="hidden"
+              animate="visible"
+            />
+            {/* 기본 경로 */}
+            <motion.path
+              key={index}
+              id={`path-${index}`}
+              d={path}
+              stroke="#ffffff"
+              strokeWidth="2"
+              fill="transparent"
+              variants={pathVariants}
+              initial="hidden"
+              animate="visible"
+              onAnimationComplete={
+                index === paths.length - 1 ? () => setPathsComplete(true) : undefined
+              }
+            />
+          </>
         ))}
+
 
         {/* 텍스트들 */}
         {texts.map((text, index) => (

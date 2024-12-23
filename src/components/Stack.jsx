@@ -6,10 +6,11 @@ import { FaHtml5, FaVuejs } from 'react-icons/fa';
 import { FaCss3Alt } from 'react-icons/fa';
 import { DiDjango } from 'react-icons/di';
 import { DiReact } from 'react-icons/di';
+import { RiVuejsFill } from "react-icons/ri";
 
 const StackContainer = styled.div`
   padding: 4rem 2rem;
-  background-color: #f0f0f0;
+  background-color: #1a1a1a;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +18,7 @@ const StackContainer = styled.div`
 
 const Title = styled.h1`
   font-size: 2.5rem;
-  color: #333;
+  color: #fff;
   margin-bottom: 3rem;
 `;
 
@@ -34,14 +35,14 @@ const TechItem = styled(motion.div)`
   position: relative;
   text-align: center;
   font-size: 1.5rem;
-  color: #333;
+  color: #fff;
   width: 150px;
   height: 150px;
   margin: 1rem;
 `;
 
 const TechIcon = styled(motion.div)`
-  font-size: 3rem;
+  font-size: 5rem;
   transition: transform 0.3s ease;
   margin-bottom: 1rem;
 
@@ -71,7 +72,7 @@ const Stack = () => {
             transition={{ duration: 0.8, delay: index * 0.3 }}
           >
             <TechIcon>{tech.icon}</TechIcon>
-            <div>{tech.name}</div>
+            {/* <div>{tech.name}</div> */}
           </TechItem>
         ))}
       </StackGrid>
