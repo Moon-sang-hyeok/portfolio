@@ -1,7 +1,8 @@
 // src/App.jsx
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
+import Home from "./components/Home";
+import Projects from "./components/Projects";
 import Section from "./components/Section";
 import Footer from "./components/Footer";
 
@@ -21,17 +22,23 @@ const App = () => {
     };
   }, []);
 
+  // 특정 id로 스크롤 이동
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ 
+        behavior: "smooth", 
+        block: "start" // 섹션의 시작 부분으로 스크롤 이동
+      });
     }
   };
+  
 
   return (
     <>
       <Navbar scrollToSection={scrollToSection} />
-      <Hero scrollPosition={scrollPosition} />
+      <Home scrollPosition={scrollPosition} />
+      <Projects />
       <Section
         id="projects"
         title="Projects"

@@ -29,11 +29,12 @@ const NavbarComponent = ({ scrollToSection }) => (
   <Navbar>
     <div>Moon Portfolio</div>
     <div>
-      <a onClick={() => scrollToSection("home")}>Home</a>
-      <a onClick={() => scrollToSection("projects")}>Projects</a>
-      <a onClick={() => scrollToSection("features")}>Features</a>
-      <a onClick={() => scrollToSection("stack")}>Stack</a>
-      <a onClick={() => scrollToSection("contact")}>Contact</a>
+      {/* 클릭 시 scrollToSection 호출 */}
+      <a href="#" onClick={() => scrollToSection("home")}>Home</a>
+      <a href="#" onClick={() => scrollToSection("projects")}>Projects</a>
+      <a href="#" onClick={() => scrollToSection("features")}>Features</a>
+      <a href="#" onClick={() => scrollToSection("stack")}>Stack</a>
+      <a href="#" onClick={() => scrollToSection("contact")}>Contact</a>
     </div>
   </Navbar>
 );

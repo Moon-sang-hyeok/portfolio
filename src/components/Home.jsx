@@ -153,7 +153,7 @@ const Hero = () => {
               key={index}
               cx={pos.cx}
               cy={pos.cy}
-              r="7"
+              r="5"
               animate={pulseAnimation}
             />
           ))}
